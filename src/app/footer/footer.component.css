@@ -1,0 +1,19 @@
+img{
+    width: 60px;
+    height: 80px;
+}
+p{
+    font-size: 20px;
+    font-weight: bold;
+    color: #c3002f;
+}
+footer{
+    background-color:#f7f7f7;
+}
+a{
+    text-decoration: none;
+    font-size: 16px;
+}
+h5{
+    color: #c3002f;
+}

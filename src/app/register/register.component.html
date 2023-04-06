@@ -1,0 +1,67 @@
+<div class="container card shadow p-3 mb-4">
+    <h3>Signup Form</h3>
+    <div class="row">
+        <form class="loginform" #lgform="ngForm" novalidate (ngSubmit)="lgform.form.valid && onSubmit(lgform)">
+
+            <div class="form-group">
+                <div class="col-lg-6">
+                    <label><strong>First Name</strong></label>
+                    <input type="text" class="form-control" placeholder="Enter Your First Name" name="fname"
+                        #fname="ngModel" ngModel required>
+                    <span class="text-danger" *ngIf="submit&&fname.errors?.['required']">Enter your First Name!!</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-lg-6">
+                    <label><strong>Last Name</strong></label>
+                    <input type="text" class="form-control" placeholder="Enter Your Last Name" name="lname"
+                        #lname="ngModel" ngModel required>
+                    <span class="text-danger" *ngIf="submit&&lname.errors?.['required']">Enter your Last Name!!</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-lg-6">
+                    <label><strong>Email</strong></label>
+                    <input type="email" class="form-control" placeholder=" Email Address" 
+                   required pattern=" pattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9_-]+.[a-zA-Z0-9-.]{2,61}$/"  name="email" #email="ngModel"
+                        ngModel required>
+                    <span class="text-danger" *ngIf="submit&&email.errors?.['required']">Email Cant be Blank!!</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-lg-6">
+                    <label><strong>Password</strong></label>
+                    <input type="text" class="form-control" placeholder="Enter Your Last Name" name="password"
+                        #password="ngModel" ngModel required>
+                    <span class="text-danger" *ngIf="submit&&password.errors?.['required']">Enter your password!!</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-lg-6">
+                    <label><strong>Gender</strong></label>
+                    <div>
+
+                        <input type="radio" value="male" name="gender"  #gender="ngModel" ngModel required>&nbsp;<label for="Male">Male</label>&nbsp;&nbsp;
+                        <input type="radio" value="femlae" name="gender"  #gender="ngModel" ngModel required="">&nbsp;<label
+                            for="Female">Female</label>
+                        <br>
+                            <span class="text-danger" *ngIf="submit&&gender.errors?.['required']">enter your Gender!!</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-lg-6">
+                    <p>Yet member?<a href="login.component.html">Login Now</a></p>
+
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-lg-6">
+                    <button type="submit" (click)="submit = true">SignUp</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>

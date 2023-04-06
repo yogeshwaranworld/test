@@ -1,0 +1,22 @@
+.btn-primary {
+    margin: 20px;
+    
+}
+img{
+    width: 60px;
+    height: 80px;
+}
+ul{
+    font-size: 18px;
+    font-weight: 500;
+}
+header{
+    background-color:#f7f7f7;
+}
+.haeda{
+    color: #c3002f;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: bold;
+}
